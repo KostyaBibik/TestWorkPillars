@@ -32,8 +32,8 @@ public class MovingController : MonoBehaviour
                 }
             }
         }
-        
-        StartCoroutine(StartMove(correctPlayers[Random.Range(0, correctPlayers.Count)].transform, target));
+        var movingPlayer = correctPlayers[Random.Range(0, correctPlayers.Count)].transform;
+        StartCoroutine(StartMove(movingPlayer, target));
     }
 
     private IEnumerator StartMove(Transform movingObj, Vector3 target)
